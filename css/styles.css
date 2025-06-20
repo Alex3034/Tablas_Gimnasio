@@ -1,11 +1,25 @@
 body {
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    background: #fafafa;
+    color: #222;
+}
+
+header {
+    padding-top: 18px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav.menu a:hover {
+    color: #222;
 }
 
 nav.menu {
     background-color: #fc7d07;
-    padding: 10px 20px;
+    padding: 5px 0px;
     margin: 0;
     padding-left: 0;
 }
@@ -14,7 +28,7 @@ nav.menu ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 100px;
 }
 
 nav.menu ul a {
@@ -27,10 +41,23 @@ nav.menu ul a {
     text-align: center;
 }
 
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 61%;
+    background: rgba(0, 0, 0, 0.38);
+    /* negro semitransparente */
+    z-index: 1;
+}
+
 .hero img {
+    top: 0;
     width: 100%;
     max-width: 100%;
-    height: 320px;
+    height: 400px;
     object-fit: cover;
     object-position: center 46%;
 }
@@ -40,7 +67,34 @@ section.hero figure {
     padding: 0;
 }
 
-section.hero {
+.hero h1,
+.hero p {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 2px 12px #000;
+    width: 100%;
+    z-index: 2;
+}
+
+.hero h1 {
+    top: 40%;
+    font-size: 3.5em;
+    font-weight: bold;
+    color: #ff8500;
+}
+
+.hero p {
+    top: 58%;
+    font-size: 2em;
+}
+
+section.hero,
+.hero h1,
+.hero p {
+    margin-top: -6.5%;
     max-width: 100%;
 }
 
@@ -78,10 +132,12 @@ th {
     letter-spacing: 0.5px;
     border-bottom: 3px solid #d16a04;
 }
+
 td.last-day {
     border-bottom: 1px;
 }
-tr.last-day td { 
+
+tr.last-day td {
     border-bottom: 1px;
 }
 
